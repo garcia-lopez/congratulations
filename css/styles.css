@@ -1,0 +1,121 @@
+/*Hey Pau, u should read this https://fonts.google.com/knowledge/using_type/the_foundations_of_web_typography*/
+
+:root {
+    --background: #100225;
+    --background_gradient: radial-gradient(circle closest-side, rgba(98, 56, 161, 0.8) 1%, rgba(17, 2, 40, 0.8) 130%);
+    --pink: #C231C9;
+    --lavander: #4C5DD7;
+    --light_blue: #68A2EB;
+    --purple: #260868;
+    --font-family: "Albert Sans", serif;
+    --font-weight: 100;
+    --font-style: normal;
+
+}
+  
+body {
+    padding: 0;
+    height:100vh;
+    margin: 0;
+    background-image: url('../assets/blackBrickBackground.jpg'); /* Replace with your image path */
+}
+
+/*Where everything is contained*/
+#container {
+    display: flex;
+    margin: 0%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background_gradient);
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: red;
+    background-color: red;
+}
+
+/*Where everything is contained*/
+#container {
+    display: flex;
+    margin: 0%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background_gradient);
+    height: 100%;
+    width: 100%;
+}
+
+#neonLights {
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-style: var(--font-style);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 20px white, 1px 0 5px white, 0 0 100px var(--pink), 0 0 60px var(--pink), 0 0 40px var(--pink),  0 0 100px var(--pink)  ;
+    padding: 20px;
+    border-color: white;
+    box-shadow:0px 0px 20px white,0px 0px 10px white, 0px 0px 80px var(--light_blue),inset 0px 0px 20px white,inset 0px 0px 10px white, inset 0px 0px 100px var(--light_blue);
+    border-style: solid;
+    border-radius: 10%;
+    margin-bottom: 20px;
+    width: 200px;
+
+}
+
+
+/*Styling the arrow*/
+#arrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: MoveUpDown 1s linear infinite;
+    position: relative;
+    margin-top: 40px;
+}
+
+
+#arrowBody {
+    height: 100px;
+    width: 50px;
+    background-color: rgba(98, 56, 161, 0.8);
+}
+
+#arrowTriangle {
+    margin-top: 0;
+    height: 0;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid rgba(98, 56, 161, 0.8);
+}
+
+
+/*Animations :)*/
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 55px;
+    }
+  }
+
+
+
