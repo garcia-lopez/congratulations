@@ -7,6 +7,43 @@
     <title>Congrats</title>
 </head>
 <body>
-      <h1 id="mainMessage">Congratulations <br/> you are a <br/> certified Engineer </h1> 
+    <h1 id="mainMessage">
+        Congratulations <br/> 
+        you are a <br/> 
+        certified Engineer
+    </h1> 
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        window.onload = function() {
+            var duration = 1 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                // launch a few confetti from the left edge
+                confetti({
+                    startVelocity: 40,
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 110,
+                    origin: { x: 0, y: 1}
+                });
+
+                // and launch a few from the right edge
+                confetti({
+                    startVelocity: 40,
+                    particleCount: 7,
+                    angle: -150,
+                    spread: 110,
+                    origin: { x: 1, y:0}
+                });
+
+                // keep going until we are out of time
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        };
+    </script>
 </body>
 </html>
